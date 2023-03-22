@@ -1,4 +1,4 @@
-# advance-android-examples
+# Advance-android-examples
 Some advance topic examples for kotlin android
 
 # Advanced MVVM Example with Kotlin and ViewBinding
@@ -23,7 +23,6 @@ dependencies {
 ## 2. Enable ViewBinding in build.gradle (Module):
 
 ```
-groovyCopy code
 android {
     ...
     buildFeatures {
@@ -36,7 +35,6 @@ android {
 ## 3. Create a data class for the Repository:
 
 ```
-kotlinCopy code
 data class Repository(
     val id: Long,
     val name: String,
@@ -50,7 +48,6 @@ data class Repository(
 ## 4. Define the API interface:
 
 ```
-kotlinCopy code
 import retrofit2.Call
 import retrofit2.http.GET
 
@@ -63,7 +60,6 @@ interface GitHubApi {
 ## 5. Create a Retrofit instance:
 
 ```
-kotlinCopy code
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -84,7 +80,6 @@ object RetrofitClient {
 ## 6. Create a Repository ViewModel:
 
 ```
-kotlinCopy code
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -107,7 +102,6 @@ class RepoViewModel : ViewModel() {
 ## 7. Implement the RecyclerView adapter with ViewBinding:
 
 ```
-kotlinCopy code
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -140,7 +134,6 @@ class RepoAdapter(private val repoList: List<Repository>) : RecyclerView.Adapter
 ## 8. Implement the MainActivity with ViewBinding:
 
 ```
-kotlinCopy code
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -180,7 +173,6 @@ class MainActivity : AppCompatActivity() {
 activity_main.xml:
 
 ```
-xmlCopy code
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -203,7 +195,6 @@ xmlCopy code
 repo_item.xml:
 
 ```
-xmlCopy code
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
